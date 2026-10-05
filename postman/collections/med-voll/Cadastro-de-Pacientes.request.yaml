@@ -1,0 +1,5 @@
+$kind: http-request
+name: 'Cadastro de Pacientes'
+method: POST
+url: '{{home}}/pacientes'
+order: 2000

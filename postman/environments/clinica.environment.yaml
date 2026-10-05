@@ -1,0 +1,5 @@
+name: clinica
+values:
+  - key: home
+    value: 'http://localhost:8080'
+    enabled: true
