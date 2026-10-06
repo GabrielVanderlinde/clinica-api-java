@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: POST
+body:
+  type: json
+  content: |
+    { 
+        "nome": "Júlia Vasconcellos", 
+        "email": "julia.vasconellos@voll.med", 
+        "telefone": "47 99824-7376", //criado aleatoriamente
+        "cpf": "118.745.151-89", //criado aleatoriamente
+        "endereco": { 
+            "logradouro": "rua 5", 
+            "bairro": "bairro da baixada", 
+            "cep": "12345678", 
+            "cidade": "Gramado", 
+            "uf": "RS", 
+            "numero": "70", 
+            "complemento": "Casa com Dois Andares" 
+        } 
+    }
+order: 210137293677506

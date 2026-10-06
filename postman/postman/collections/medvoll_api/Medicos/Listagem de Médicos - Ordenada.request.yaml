@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{home}}/medicos?sort=nome,asc"
+method: GET
+queryParams:
+  sort: nome,asc
+body:
+  type: json
+  content: ""
+order: 4498814284591931
