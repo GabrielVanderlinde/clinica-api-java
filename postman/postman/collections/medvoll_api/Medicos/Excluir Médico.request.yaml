@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{home}}/medicos/1"
+method: DELETE
+order: 4502404557213134
