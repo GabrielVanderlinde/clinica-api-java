@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{home}}/medicos"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Dr. Roberto Santos",
+        "email": "roberto.santos@voll.med",
+        "telefone": "21 97777-7777",
+        "crm": "345678",
+        "especialidade": "DERMATOLOGIA",
+        "endereco": {
+            "logradouro": "Rua da Praia",
+            "bairro": "Copacabana",
+            "cep": "22041001",
+            "cidade": "Rio de Janeiro",
+            "uf": "RJ",
+            "numero": "789",
+            "complemento": "Cobertura"
+        }
+    }
+order: 3

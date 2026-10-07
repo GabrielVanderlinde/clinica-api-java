@@ -1,0 +1,25 @@
+$kind: http-request
+url: "{{home}}/medicos?size=1&page=1"
+method: GET
+queryParams:
+  size: "1"
+  page: "1"
+body:
+  type: json
+  content: |
+    { 
+        "nome": "Rodrigo Ferreira", 
+        "email": "rodrigo.ferreira@voll.med", 
+        "crm": "123456", 
+        "especialidade": "ORTOPEDIA", 
+        "endereco": { 
+            "logradouro": "rua 1", 
+            "bairro": "bairro", 
+            "cep": "12345678", 
+            "cidade": "Brasilia", 
+            "uf": "DF", 
+            "numero": "1", 
+            "complemento": "complemento" 
+        } 
+    }
+order: 4344946518343317

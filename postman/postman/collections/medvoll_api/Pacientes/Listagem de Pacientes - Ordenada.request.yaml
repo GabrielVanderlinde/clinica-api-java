@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{home}}/pacientes?sort=nome,asc"
+method: GET
+queryParams:
+  sort: nome,asc
+body:
+  type: json
+  content: ""
+order: 3

@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{home}}/medicos"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Dr. Carlos Ferreira",
+        "email": "carlos.ferreira@voll.med",
+        "telefone": "47 99999-9999",
+        "crm": "123456",
+        "especialidade": "ORTOPEDIA",
+        "endereco": {
+            "logradouro": "Rua das Flores",
+            "bairro": "Centro",
+            "cep": "89000000",
+            "cidade": "Blumenau",
+            "uf": "SC",
+            "numero": "123",
+            "complemento": "Apto 101"
+        }
+    }
+order: 1

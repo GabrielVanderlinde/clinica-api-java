@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Júlia Vasconcellos",
+        "email": "julia.vasconcellos@voll.med",
+        "telefone": "47 99824-7376",
+        "cpf": "118.745.151-89",
+        "endereco": {
+            "logradouro": "Rua das Flores",
+            "bairro": "Centro",
+            "cep": "89000000",
+            "cidade": "Blumenau",
+            "uf": "SC",
+            "numero": "123",
+            "complemento": "Apto 201"
+        }
+    }
+order: 1

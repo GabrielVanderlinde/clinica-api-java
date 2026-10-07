@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Beatriz Ramos",
+        "email": "beatriz.ramos@voll.med",
+        "telefone": "51 95432-1098",
+        "cpf": "567.890.123-45",
+        "endereco": {
+            "logradouro": "Rua Oswaldo Aranha",
+            "bairro": "Centro",
+            "cep": "90035-190",
+            "cidade": "Porto Alegre",
+            "uf": "RS",
+            "numero": "654",
+            "complemento": "Apto 601"
+        }
+    }
+order: 5

@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Lucas Gabriel",
+        "email": "lucas.gabriel@voll.med",
+        "telefone": "31 96543-2109",
+        "cpf": "456.789.012-34",
+        "endereco": {
+            "logradouro": "Rua da Bahia",
+            "bairro": "Savassi",
+            "cep": "30140-020",
+            "cidade": "Belo Horizonte",
+            "uf": "MG",
+            "numero": "321",
+            "complemento": "Apto 501"
+        }
+    }
+order: 4

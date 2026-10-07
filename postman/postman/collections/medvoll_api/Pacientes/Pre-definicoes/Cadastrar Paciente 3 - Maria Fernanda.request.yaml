@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Maria Fernanda",
+        "email": "maria.fernanda@voll.med",
+        "telefone": "21 97654-3210",
+        "cpf": "345.678.901-23",
+        "endereco": {
+            "logradouro": "Rua da Praia",
+            "bairro": "Copacabana",
+            "cep": "22041-001",
+            "cidade": "Rio de Janeiro",
+            "uf": "RJ",
+            "numero": "789",
+            "complemento": "Apto 401"
+        }
+    }
+order: 3

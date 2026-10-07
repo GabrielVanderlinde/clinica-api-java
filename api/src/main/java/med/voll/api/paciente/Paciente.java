@@ -1,4 +1,4 @@
-package med.voll.api.medico;
+package med.voll.api.paciente;
 
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
@@ -6,45 +6,41 @@ import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import med.voll.api.endereco.DadosAtualizacaoEndereco;
 import med.voll.api.endereco.Endereco;
-import org.hibernate.annotations.DynamicUpdate;
 
-@Table(name = "medicos")
-@Entity(name = "Medico")
-@DynamicUpdate
 @Getter
+@EqualsAndHashCode(of = "id")
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode(of = "id")
-public class Medico {
+@Entity
+@Table(name = "pacientes")
+public class Paciente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String nome;
     private String email;
+    private String cpf;
     private String telefone;
-    private String crm;
-
-    @Enumerated(EnumType.STRING)
-    private Especialidade especialidade;
 
     @Embedded
     private Endereco endereco;
 
     private Boolean ativo;
 
-    public Medico(DadosCadastroMedico dados) {
-        this.nome = dados.nome();
-        this.crm = dados.crm();
-        this.email = dados.email();
-        this.telefone = dados.telefone();
-        this.especialidade = dados.especialidade();
-        this.endereco = new Endereco(dados.endereco());
+    public Paciente(@Valid DadosCadastroPaciente dados) {
         this.ativo = true;
+        this.nome = dados.nome();
+        this.email = dados.email();
+        this.cpf = dados.cpf();
+        this.telefone = dados.telefone();
+        this.endereco = new Endereco(dados.endereco());
     }
 
-    public void atualizarInformacoes(@Valid DadosAtualizacaoMedico dados) {
+    public void atualizarInformacoes(@Valid DadosAtualizacaoPaciente dados) {
         if (dados.nome() != null) {
             this.nome = dados.nome();
         }
@@ -56,7 +52,7 @@ public class Medico {
         }
     }
 
-    public void excluir() {
+    public void inativar() {
         this.ativo = false;
     }
 }

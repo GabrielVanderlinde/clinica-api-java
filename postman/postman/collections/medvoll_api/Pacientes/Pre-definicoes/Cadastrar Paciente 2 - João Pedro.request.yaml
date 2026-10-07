@@ -1,0 +1,22 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "João Pedro",
+        "email": "joao.pedro@voll.med",
+        "telefone": "11 98765-4321",
+        "cpf": "234.567.890-12",
+        "endereco": {
+            "logradouro": "Avenida Paulista",
+            "bairro": "Bela Vista",
+            "cep": "01310-100",
+            "cidade": "São Paulo",
+            "uf": "SP",
+            "numero": "456",
+            "complemento": "Apto 302"
+        }
+    }
+order: 2
