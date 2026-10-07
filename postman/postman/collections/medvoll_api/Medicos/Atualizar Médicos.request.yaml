@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{home}}/medicos"
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+        "id" : 1,
+        "nome" : "Nome Atualizado"
+    }
+scripts:
+  - type: afterResponse
+    code: ""
+    language: text/javascript
+order: 4500128875641864
