@@ -11,7 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.web.bind.annotation.*;
 
-import java.awt.print.Pageable;
+import org.springframework.data.domain.Pageable;
 
 @RestController
 @RequestMapping("pacientes")
@@ -28,7 +28,7 @@ public class PacienteController {
 
     @GetMapping
     public Page<DadosListagemPaciente> listar(@PageableDefault(page = 0, size = 10, sort = {"nome"}) Pageable paginacao) {
-        return repository.findAll((org.springframework.data.domain.Pageable) paginacao).map(DadosListagemPaciente::new);
+        return repository.findAll(paginacao).map(DadosListagemPaciente::new);
     }
 }
 
