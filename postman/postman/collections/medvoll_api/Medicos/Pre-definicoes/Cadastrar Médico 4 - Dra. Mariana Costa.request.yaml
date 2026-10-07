@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{home}}/medicos"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Dra. Mariana Costa",
+        "email": "mariana.costa@voll.med",
+        "telefone": "31 96666-6666",
+        "crm": "456789",
+        "especialidade": "PEDIATRIA",
+        "endereco": {
+            "logradouro": "Rua da Bahia",
+            "bairro": "Savassi",
+            "cep": "30140-020",
+            "cidade": "Belo Horizonte",
+            "uf": "MG",
+            "numero": "321",
+            "complemento": "Consultório 3"
+        }
+    }
+order: 4

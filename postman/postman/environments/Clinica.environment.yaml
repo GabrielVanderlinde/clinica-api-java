@@ -1,4 +1,4 @@
 name: Clinica
 values:
   - key: home
-    value: ''
+    value: 'http://localhost:8080'

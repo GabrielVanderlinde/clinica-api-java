@@ -1,0 +1,378 @@
+{
+  "info": {
+    "name": "Voll Med API",
+    "description": "API da clínica médica Voll Med",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "Médicos",
+      "item": [
+        {
+          "name": "Pré-definições",
+          "item": [
+            {
+              "name": "Cadastrar Médico 1 - Dr. Carlos Ferreira",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Dr. Carlos Ferreira\",\n    \"email\": \"carlos.ferreira@voll.med\",\n    \"telefone\": \"47 99999-9999\",\n    \"crm\": \"123456\",\n    \"especialidade\": \"ORTOPEDIA\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores\",\n        \"bairro\": \"Centro\",\n        \"cep\": \"89000-000\",\n        \"cidade\": \"Blumenau\",\n        \"uf\": \"SC\",\n        \"numero\": \"123\",\n        \"complemento\": \"Apto 101\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/medicos",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["medicos"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Médico 2 - Dra. Ana Silva",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Dra. Ana Silva\",\n    \"email\": \"ana.silva@voll.med\",\n    \"telefone\": \"11 98888-8888\",\n    \"crm\": \"234567\",\n    \"especialidade\": \"CARDIOLOGIA\",\n    \"endereco\": {\n        \"logradouro\": \"Avenida Paulista\",\n        \"bairro\": \"Bela Vista\",\n        \"cep\": \"01310-100\",\n        \"cidade\": \"São Paulo\",\n        \"uf\": \"SP\",\n        \"numero\": \"456\",\n        \"complemento\": \"Sala 2\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/medicos",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["medicos"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Médico 3 - Dr. Roberto Santos",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Dr. Roberto Santos\",\n    \"email\": \"roberto.santos@voll.med\",\n    \"telefone\": \"21 97777-7777\",\n    \"crm\": \"345678\",\n    \"especialidade\": \"DERMATOLOGIA\",\n    \"endereco\": {\n        \"logradouro\": \"Rua da Praia\",\n        \"bairro\": \"Copacabana\",\n        \"cep\": \"22041-001\",\n        \"cidade\": \"Rio de Janeiro\",\n        \"uf\": \"RJ\",\n        \"numero\": \"789\",\n        \"complemento\": \"Cobertura\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/medicos",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["medicos"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Médico 4 - Dra. Mariana Costa",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Dra. Mariana Costa\",\n    \"email\": \"mariana.costa@voll.med\",\n    \"telefone\": \"31 96666-6666\",\n    \"crm\": \"456789\",\n    \"especialidade\": \"PEDIATRIA\",\n    \"endereco\": {\n        \"logradouro\": \"Rua da Bahia\",\n        \"bairro\": \"Savassi\",\n        \"cep\": \"30140-020\",\n        \"cidade\": \"Belo Horizonte\",\n        \"uf\": \"MG\",\n        \"numero\": \"321\",\n        \"complemento\": \"Consultório 3\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/medicos",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["medicos"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Médico 5 - Dr. Pedro Oliveira",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Dr. Pedro Oliveira\",\n    \"email\": \"pedro.oliveira@voll.med\",\n    \"telefone\": \"51 95555-5555\",\n    \"crm\": \"567890\",\n    \"especialidade\": \"GINECOLOGIA\",\n    \"endereco\": {\n        \"logradouro\": \"Rua Oswaldo Aranha\",\n        \"bairro\": \"Centro\",\n        \"cep\": \"90035-190\",\n        \"cidade\": \"Porto Alegre\",\n        \"uf\": \"RS\",\n        \"numero\": \"654\",\n        \"complemento\": \"Sala 5\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/medicos",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["medicos"]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Cadastro de Médicos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\": \"Carlos Ferreira\",\n    \"email\": \"carlos.ferreira@voll.med\",\n    \"telefone\": \"47 99999-9999\",\n    \"crm\": \"654321\",\n    \"especialidade\": \"ORTOPEDIA\",\n    \"endereco\": {\n        \"logradouro\": \"rua 1\",\n        \"bairro\": \"bairro\",\n        \"cep\": \"12345678\",\n        \"cidade\": \"Brasilia\",\n        \"uf\": \"DF\",\n        \"numero\": \"1\",\n        \"complemento\": \"complemento\"\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/medicos",
+              "host": ["{{baseUrl}}"],
+              "path": ["medicos"]
+            }
+          }
+        },
+        {
+          "name": "Listagem de Médicos",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/medicos",
+              "host": ["{{baseUrl}}"],
+              "path": ["medicos"]
+            }
+          }
+        },
+        {
+          "name": "Listagem de Médicos - Ordenada",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/medicos?sort=nome,asc",
+              "host": ["{{baseUrl}}"],
+              "path": ["medicos"],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "nome,asc"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Listagem Personalizada - Paginação",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/medicos?page=0&size=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["medicos"],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Atualizar Médicos",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"id\": 1,\n    \"nome\": \"Nome Atualizado\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/medicos",
+              "host": ["{{baseUrl}}"],
+              "path": ["medicos"]
+            }
+          }
+        },
+        {
+          "name": "Excluir Médico",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/medicos/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["medicos", "1"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pacientes",
+      "item": [
+        {
+          "name": "Pré-definições",
+          "item": [
+            {
+              "name": "Cadastrar Paciente 1 - Júlia Vasconcellos",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Júlia Vasconcellos\",\n    \"email\": \"julia.vasconcellos@voll.med\",\n    \"telefone\": \"47 99824-7376\",\n    \"cpf\": \"118.745.151-89\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores\",\n        \"bairro\": \"Centro\",\n        \"cep\": \"89000-000\",\n        \"cidade\": \"Blumenau\",\n        \"uf\": \"SC\",\n        \"numero\": \"123\",\n        \"complemento\": \"Apto 201\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pacientes",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["pacientes"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Paciente 2 - João Pedro",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"João Pedro\",\n    \"email\": \"joao.pedro@voll.med\",\n    \"telefone\": \"11 98765-4321\",\n    \"cpf\": \"234.567.890-12\",\n    \"endereco\": {\n        \"logradouro\": \"Avenida Paulista\",\n        \"bairro\": \"Bela Vista\",\n        \"cep\": \"01310-100\",\n        \"cidade\": \"São Paulo\",\n        \"uf\": \"SP\",\n        \"numero\": \"456\",\n        \"complemento\": \"Apto 302\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pacientes",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["pacientes"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Paciente 3 - Maria Fernanda",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Maria Fernanda\",\n    \"email\": \"maria.fernanda@voll.med\",\n    \"telefone\": \"21 97654-3210\",\n    \"cpf\": \"345.678.901-23\",\n    \"endereco\": {\n        \"logradouro\": \"Rua da Praia\",\n        \"bairro\": \"Copacabana\",\n        \"cep\": \"22041-001\",\n        \"cidade\": \"Rio de Janeiro\",\n        \"uf\": \"RJ\",\n        \"numero\": \"789\",\n        \"complemento\": \"Apto 401\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pacientes",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["pacientes"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Paciente 4 - Lucas Gabriel",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Lucas Gabriel\",\n    \"email\": \"lucas.gabriel@voll.med\",\n    \"telefone\": \"31 96543-2109\",\n    \"cpf\": \"456.789.012-34\",\n    \"endereco\": {\n        \"logradouro\": \"Rua da Bahia\",\n        \"bairro\": \"Savassi\",\n        \"cep\": \"30140-020\",\n        \"cidade\": \"Belo Horizonte\",\n        \"uf\": \"MG\",\n        \"numero\": \"321\",\n        \"complemento\": \"Apto 501\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pacientes",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["pacientes"]
+                }
+              }
+            },
+            {
+              "name": "Cadastrar Paciente 5 - Beatriz Ramos",
+              "request": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n    \"nome\": \"Beatriz Ramos\",\n    \"email\": \"beatriz.ramos@voll.med\",\n    \"telefone\": \"51 95432-1098\",\n    \"cpf\": \"567.890.123-45\",\n    \"endereco\": {\n        \"logradouro\": \"Rua Oswaldo Aranha\",\n        \"bairro\": \"Centro\",\n        \"cep\": \"90035-190\",\n        \"cidade\": \"Porto Alegre\",\n        \"uf\": \"RS\",\n        \"numero\": \"654\",\n        \"complemento\": \"Apto 601\"\n    }\n}"
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/pacientes",
+                  "host": ["{{baseUrl}}"],
+                  "path": ["pacientes"]
+                }
+              }
+            }
+          ]
+        },
+        {
+          "name": "Cadastro de Pacientes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"nome\": \"Júlia Vasconcellos\",\n    \"email\": \"julia.vasconcellos@voll.med\",\n    \"telefone\": \"47 99824-7376\",\n    \"cpf\": \"118.745.151-89\",\n    \"endereco\": {\n        \"logradouro\": \"Rua das Flores\",\n        \"bairro\": \"Centro\",\n        \"cep\": \"89000-000\",\n        \"cidade\": \"Blumenau\",\n        \"uf\": \"SC\",\n        \"numero\": \"123\",\n        \"complemento\": \"Apto 201\"\n    }\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/pacientes",
+              "host": ["{{baseUrl}}"],
+              "path": ["pacientes"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

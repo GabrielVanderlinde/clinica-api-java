@@ -1,14 +1,15 @@
 $kind: http-request
-url: "{{home}}/pacientes"
+url: "{{home}}/medicos"
 method: POST
 body:
   type: json
   content: |-
     {
-        "nome": "Júlia Vasconcellos",
-        "email": "julia.vasconcellos@voll.med",
-        "telefone": "47 99824-7376",
-        "cpf": "118.745.151-89",
+        "nome": "Dr. Carlos Ferreira",
+        "email": "carlos.ferreira@voll.med",
+        "telefone": "47 99999-9999",
+        "crm": "123456",
+        "especialidade": "ORTOPEDIA",
         "endereco": {
             "logradouro": "Rua das Flores",
             "bairro": "Centro",
@@ -16,7 +17,7 @@ body:
             "cidade": "Blumenau",
             "uf": "SC",
             "numero": "123",
-            "complemento": "Apto 201"
+            "complemento": "Apto 101"
         }
     }
-order: 1791375742750
+order: 1

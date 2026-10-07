@@ -1,0 +1,23 @@
+$kind: http-request
+url: "{{home}}/medicos"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "nome": "Dra. Ana Silva",
+        "email": "ana.silva@voll.med",
+        "telefone": "11 98888-8888",
+        "crm": "234567",
+        "especialidade": "CARDIOLOGIA",
+        "endereco": {
+            "logradouro": "Avenida Paulista",
+            "bairro": "Bela Vista",
+            "cep": "01310-100",
+            "cidade": "São Paulo",
+            "uf": "SP",
+            "numero": "456",
+            "complemento": "Sala 2"
+        }
+    }
+order: 2
