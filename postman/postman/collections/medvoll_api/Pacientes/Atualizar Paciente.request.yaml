@@ -1,0 +1,12 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: PUT
+body:
+  type: json
+  content: |-
+    {
+        "id": 1,
+        "nome": "Nome Atualizado",
+        "telefone": "47 98888-8888"
+    }
+order: 1

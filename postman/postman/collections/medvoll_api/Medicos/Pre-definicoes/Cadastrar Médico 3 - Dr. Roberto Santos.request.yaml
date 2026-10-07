@@ -13,7 +13,7 @@ body:
         "endereco": {
             "logradouro": "Rua da Praia",
             "bairro": "Copacabana",
-            "cep": "22041-001",
+            "cep": "22041001",
             "cidade": "Rio de Janeiro",
             "uf": "RJ",
             "numero": "789",

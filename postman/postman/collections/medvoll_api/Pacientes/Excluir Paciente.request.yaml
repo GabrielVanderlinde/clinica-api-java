@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{home}}/pacientes/1"
+method: DELETE
+order: 4

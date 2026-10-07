@@ -13,7 +13,7 @@ body:
         "endereco": {
             "logradouro": "Rua das Flores",
             "bairro": "Centro",
-            "cep": "89000-000",
+            "cep": "89000000",
             "cidade": "Blumenau",
             "uf": "SC",
             "numero": "123",

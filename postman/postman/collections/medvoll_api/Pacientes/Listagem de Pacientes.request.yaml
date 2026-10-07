@@ -1,0 +1,9 @@
+$kind: http-request
+url: "{{home}}/pacientes"
+method: GET
+headers:
+  Content-Type: application/json
+body:
+  type: json
+  content: ""
+order: 2

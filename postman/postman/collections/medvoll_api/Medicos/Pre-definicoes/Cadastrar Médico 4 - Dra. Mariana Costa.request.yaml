@@ -13,7 +13,7 @@ body:
         "endereco": {
             "logradouro": "Rua da Bahia",
             "bairro": "Savassi",
-            "cep": "30140-020",
+            "cep": "30140020",
             "cidade": "Belo Horizonte",
             "uf": "MG",
             "numero": "321",

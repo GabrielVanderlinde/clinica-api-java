@@ -37,12 +37,18 @@ Execute sequencialmente as requisições da pasta `Pre-definicoes/Pacientes`:
 
 Após os cadastros, você pode testar:
 
+**Médicos:**
 - **Listagem de Médicos**: GET /medicos
 - **Listagem de Médicos Ordenada**: GET /medicos?sort=nome,asc
 - **Listagem Personalizada - Paginação**: GET /medicos?page=0&size=10
 - **Atualizar Médico**: PUT /medicos (use ID 1-5)
 - **Excluir Médico**: DELETE /medicos/{id} (use ID 1-5)
+
+**Pacientes:**
 - **Listagem de Pacientes**: GET /pacientes
+- **Listagem de Pacientes Ordenada**: GET /pacientes?sort=nome,asc
+- **Atualizar Paciente**: PUT /pacientes (use ID 1-5)
+- **Excluir Paciente**: DELETE /pacientes/{id} (use ID 1-5)
 
 ## IDs dos Cadastros
 

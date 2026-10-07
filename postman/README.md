@@ -27,6 +27,14 @@ postman/
 O arquivo `Clinica.environment.yaml` está configurado com:
 - **URL base**: `http://localhost:8080`
 
+## Importante - Formato do CEP
+
+O sistema exige CEP no formato de **8 dígitos numéricos** (sem hífen):
+- ✅ Correto: `"89000000"`
+- ❌ Incorreto: `"89000-000"`
+
+Todos os exemplos nos arquivos Postman já estão no formato correto.
+
 ## Pré-definições
 
 ### Médicos (5 cadastros prontos)

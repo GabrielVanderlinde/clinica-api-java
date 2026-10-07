@@ -13,7 +13,7 @@ body:
         "endereco": {
             "logradouro": "Rua Oswaldo Aranha",
             "bairro": "Centro",
-            "cep": "90035-190",
+            "cep": "90035190",
             "cidade": "Porto Alegre",
             "uf": "RS",
             "numero": "654",

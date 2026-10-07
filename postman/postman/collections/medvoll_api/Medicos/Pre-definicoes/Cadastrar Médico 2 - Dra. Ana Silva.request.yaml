@@ -13,7 +13,7 @@ body:
         "endereco": {
             "logradouro": "Avenida Paulista",
             "bairro": "Bela Vista",
-            "cep": "01310-100",
+            "cep": "01310100",
             "cidade": "São Paulo",
             "uf": "SP",
             "numero": "456",
