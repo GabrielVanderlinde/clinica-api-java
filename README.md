@@ -1,10 +1,14 @@
 # Voll Med API
 
-API backend para gerenciamento de operações de uma clínica médica, desenvolvida com Java e Spring Boot. O projeto trabalha conceitos de APIs REST, validação, persistência relacional e migrações de banco de dados.
+API backend para gerenciamento de operações de uma clínica médica, desenvolvida com Java e Spring Boot. O projeto aborda construção de APIs REST, validação, persistência relacional, paginação e migrações de banco de dados.
+
+## Visão geral
+
+A API organiza operações relacionadas a médicos e pacientes, aplicando regras de validação e persistência. É um projeto de prática de desenvolvimento backend e de conceitos comuns em sistemas de gestão.
 
 ## Tecnologias
 
-- Java 21
+- Java
 - Spring Boot
 - Spring Data JPA e Hibernate
 - MySQL
@@ -12,61 +16,81 @@ API backend para gerenciamento de operações de uma clínica médica, desenvolv
 - Maven
 - Postman
 
+Confira a versão do Java e as dependências no arquivo de build do repositório.
+
 ## Funcionalidades
 
-- Cadastro e consulta de médicos
-- Atualização e inativação de médicos
-- Cadastro, consulta e atualização de pacientes
-- Inativação de pacientes
-- Validação de dados
-- Paginação e ordenação
-- Persistência em MySQL
-- Migrações de banco com Flyway
+- Cadastro, consulta, atualização e inativação de médicos
+- Operações de cadastro e manutenção de pacientes
+- Validação de dados de entrada
+- Paginação e ordenação de consultas
+- Persistência relacional
+- Controle de alterações do schema com Flyway
 
-## Como executar
+## Pré-requisitos
 
-### Pré-requisitos
-
-- JDK 21 ou superior
+- JDK compatível com a configuração do projeto
 - Maven
 - MySQL
-- Docker (opcional)
+- Cliente HTTP, como Postman (opcional)
 
-Clone o repositório:
+## Instalação e execução
 
 ```bash
 git clone https://github.com/GabrielVanderlinde/vollmed-api.git
 cd vollmed-api
 ```
 
-Configure as variáveis e a conexão com o banco conforme `src/main/resources/application.properties`. Não utilize nem publique credenciais reais no repositório.
+Configure a conexão com o MySQL conforme a configuração da aplicação. Use variáveis de ambiente para credenciais e mantenha segredos fora do controle de versão. Exemplo de configuração conceitual:
 
-Execute a aplicação:
+```properties
+spring.datasource.url=${DB_URL}
+spring.datasource.username=${DB_USERNAME}
+spring.datasource.password=${DB_PASSWORD}
+```
+
+Defina essas variáveis no ambiente local e execute:
 
 ```bash
-mvn clean install
+mvn clean package
 mvn spring-boot:run
 ```
 
 ## Endpoints principais
 
+Os mapeamentos abaixo devem ser conferidos nos controllers para confirmar rotas, parâmetros e payloads da versão atual.
+
 ### Médicos
 
-| Método | Rota | Operação |
-| --- | --- | --- |
-| POST | `/medicos` | Cadastrar médico |
-| GET | `/medicos` | Listar médicos |
-| PUT | `/medicos` | Atualizar médico |
-| DELETE | `/medicos/{id}` | Inativar médico |
+| Método | Operação |
+| --- | --- |
+| `POST` | Cadastrar médico |
+| `GET` | Listar médicos |
+| `PUT` | Atualizar dados de médico |
+| `DELETE` | Inativar médico por identificador |
 
 ### Pacientes
 
-As operações de pacientes incluem cadastro, consulta, atualização e inativação. Consulte os controllers para detalhes das rotas e parâmetros da versão atual.
+A implementação inclui operações para cadastro, consulta, atualização e inativação de pacientes. Consulte os controllers para as rotas e contratos completos.
 
-## Objetivo
+## Banco de dados e migrações
 
-Projeto de estudo para aprofundar conhecimentos em desenvolvimento backend, regras de negócio, validação e persistência com Spring.
+O Flyway gerencia as migrações do banco de dados. Ao iniciar a aplicação, confirme que as credenciais e o banco configurado estão acessíveis para que as migrações possam ser aplicadas corretamente.
+
+## Testes e validação
+
+Execute a suíte de testes, quando configurada, com:
+
+```bash
+mvn test
+```
+
+Utilize o Postman ou outra ferramenta HTTP para validar os fluxos da API e os códigos de resposta.
 
 ## Autor
 
-Gabriel Vanderlinde
+**Gabriel Vanderlinde** · [GitHub](https://github.com/GabrielVanderlinde)
+
+---
+
+Projeto de estudo voltado à construção de APIs backend com Java, Spring Boot e persistência relacional.
