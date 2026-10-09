@@ -1,128 +1,72 @@
 # Voll Med API
 
-Medical clinic management API developed with Java and Spring Boot. The project focuses on REST API design, validation, package organization, persistence, and database migration practices.
+API backend para gerenciamento de operações de uma clínica médica, desenvolvida com Java e Spring Boot. O projeto trabalha conceitos de APIs REST, validação, persistência relacional e migrações de banco de dados.
 
-## Overview
+## Tecnologias
 
-This project implements core clinic operations for managing doctors and patients. It demonstrates backend development fundamentals with layered architecture, business rules, validation, and persistence in a relational database.
-
-## Tech Stack
-
-- Java
+- Java 21
 - Spring Boot
-- Spring Data JPA
-- Hibernate
+- Spring Data JPA e Hibernate
 - MySQL
 - Flyway
 - Maven
 - Postman
 
-## Features
+## Funcionalidades
 
-- Doctor registration
-- Doctor listing and search
-- Doctor update and inactivation
-- Patient registration
-- Patient listing and update
-- Patient inactivation
-- Data validation with Bean Validation
-- Pagination and sorting
-- MySQL database persistence
-- Flyway migrations
+- Cadastro e consulta de médicos
+- Atualização e inativação de médicos
+- Cadastro, consulta e atualização de pacientes
+- Inativação de pacientes
+- Validação de dados
+- Paginação e ordenação
+- Persistência em MySQL
+- Migrações de banco com Flyway
 
-## Project Structure
+## Como executar
 
-```text
-src/
-├── main/
-│   ├── java/
-│   │   └── med/voll/api/
-│   │       ├── controller/
-│   │       ├── domain/
-│   │       ├── dto/
-│   │       ├── infra/
-│   │       └── service/
-│   └── resources/
-│       ├── application.properties
-│       └── db/migration/
-└── test/
-```
+### Pré-requisitos
 
-## Getting Started
-
-### Prerequisites
-
-- Java 21+
+- JDK 21 ou superior
 - Maven
 - MySQL
-- Docker (optional)
+- Docker (opcional)
 
-### Installation
+Clone o repositório:
 
 ```bash
 git clone https://github.com/GabrielVanderlinde/vollmed-api.git
 cd vollmed-api
 ```
 
-### Database configuration
+Configure as variáveis e a conexão com o banco conforme `src/main/resources/application.properties`. Não utilize nem publique credenciais reais no repositório.
 
-Edit `src/main/resources/application.properties`:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost/vollmed_api
-spring.datasource.username=root
-spring.datasource.password=root
-```
-
-### Run the application
+Execute a aplicação:
 
 ```bash
 mvn clean install
 mvn spring-boot:run
 ```
 
-## API Endpoints
+## Endpoints principais
 
-### Doctors
+### Médicos
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/medicos` | Register doctor |
-| GET | `/medicos` | List doctors |
-| PUT | `/medicos` | Update doctor |
-| DELETE | `/medicos/{id}` | Inactivate doctor |
+| Método | Rota | Operação |
+| --- | --- | --- |
+| POST | `/medicos` | Cadastrar médico |
+| GET | `/medicos` | Listar médicos |
+| PUT | `/medicos` | Atualizar médico |
+| DELETE | `/medicos/{id}` | Inativar médico |
 
-### Patients
+### Pacientes
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| POST | `/pacientes` | Register patient |
-| GET | `/pacientes` | List patients |
-| PUT | `/pacientes` | Update patient |
-| DELETE | `/pacientes/{id}` | Inactivate patient |
+As operações de pacientes incluem cadastro, consulta, atualização e inativação. Consulte os controllers para detalhes das rotas e parâmetros da versão atual.
 
-## Validation
+## Objetivo
 
-The API validates:
+Projeto de estudo para aprofundar conhecimentos em desenvolvimento backend, regras de negócio, validação e persistência com Spring.
 
-- required fields
-- e-mail format
-- CPF format
-- address data
-- business rules
-
-## Database Migrations
-
-Flyway is used to handle schema evolution and maintain versioned database changes.
-
-## Notes
-
-This project is a practical study in Spring Boot backend architecture, REST API development, JPA/Hibernate persistence, and migration management.
-
-## License
-
-MIT
-
-## Author
+## Autor
 
 Gabriel Vanderlinde
